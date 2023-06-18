@@ -1,6 +1,6 @@
 # Example of RK4 ODE Solver in Python
 
-This collection of Python files which implement the popular [RK4 numerical integration method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) and an example differential equation application of a [resistive-inductive (RL) load](https://en.wikipedia.org/wiki/RL_circuit).
+This is a collection of Python files which implement the popular [RK4 numerical integration method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) and an example differential equation application of a [resistive-inductive (RL) load](https://en.wikipedia.org/wiki/RL_circuit).
 
 The top-level file `simulation.py` simulates an RL circuit using the RK4 method.
 
