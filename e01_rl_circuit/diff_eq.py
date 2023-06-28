@@ -1,4 +1,4 @@
-from applied_voltage import applied_voltage
+from e01_rl_circuit.applied_input import applied_voltage
 
 L = 40e-3
 R = 2000e-3
