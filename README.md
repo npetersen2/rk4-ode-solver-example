@@ -12,9 +12,9 @@ Numerical integration methods (like RK4) can be generally applied to systems of 
 
 $$
 \frac{\mathrm{d} y}{\mathrm{d} t} = f(t,y)
-
+%
 \quad\quad\quad\quad
-
+%
 y(t_0) = y_\mathrm{init}
 $$
 
@@ -91,9 +91,9 @@ $$
 y = \begin{bmatrix}
 i
 \end{bmatrix}
-
+%
 \quad\quad\quad\quad
-
+%
 f(t,y) = \frac{1}{L} v(t) - \frac{R}{L} y
 $$
 
@@ -210,15 +210,14 @@ $$
 y = \begin{bmatrix}
 y_1\\
 y_2
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 i\\
 \omega
 \end{bmatrix}
-
+%
 \quad\quad\quad\quad
-
+%
 f(t,y) =
 \begin{bmatrix}
 \frac{1}{L} v(t) - \frac{R}{L} y_1 - \frac{k_\mathrm{e}}{L} y_2 \\
