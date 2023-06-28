@@ -122,6 +122,8 @@ I_{ss} &= \frac{1}{R} V_{ss}
 \end{align}
 $$
 
+This result matches our intution: in steady-state, the inductive part of the RL circuit vanishes and the system is simply governed by [Ohm's law](https://en.wikipedia.org/wiki/Ohm%27s_law): $V = IR$.
+
 ### Results for RL Circuit
 
 With the example code provided, in the circuit:
@@ -139,7 +141,7 @@ The resistance is set such that steady-state current with $V_{ss} = 1$ V applied
 
 > See the example code: `./e02_dc_motor/...`
 
-To a user, the DC motor can be thought of a black-box system. Consider the motor above with no load attached to it. The user starts by applying a DC voltage across its two terminals. Current then flows into the motor from the source. The motor will accelerate and reach a steady-state speed. These three items (voltage, current and speed) are all interrelated. Understanding the relationship is possible by examining the differential equations which govern the system.
+To a user, the DC motor can be thought of a black-box system. Consider the motor pictured below with no load attached to it. The user starts by applying a DC voltage across its two terminals. Current then flows into the motor from the source. The motor will accelerate and reach a steady-state speed. These three items (voltage, current and speed) are all interrelated. Understanding the relationship is possible by examining the differential equations which govern the system.
 
 DC motors can be modeled as a system with two parts: electrical and mechanical. Governing equations can be written for each system individually, and then coupling equations relate states in each system together.
 
