@@ -109,10 +109,10 @@ $$
 We can solve for the steady-state operating point by setting our differential equation to 0, meaning the states are not changing.
 
 $$
-\frac{\mathrm{d} i(t)}{\mathrm{d} t} = \frac{1}{L} v(t) - \frac{R}{L} i(t) = 0
+0 = \frac{\mathrm{d} i(t)}{\mathrm{d} t} = \frac{1}{L} v(t) - \frac{R}{L} i(t)
 $$
 
-Assuming a constant voltage applied $v(t) = V_{ss}$ V, solve for the current in steady-state $i(t) = I_{ss}$:
+Assuming a constant voltage applied $v(t) = V_{ss}$, solve for the current in steady-state $i(t) = I_{ss}$:
 
 $$
 \begin{align}
@@ -248,7 +248,7 @@ $$
 \end{align}
 $$
 
-Assume a constant voltage applied $v(t) = V_{ss}$ V and no load torque $\tau_\mathrm{load}(t) = 0$.
+Assume a constant voltage applied $v(t) = V_{ss}$ and no load torque $\tau_\mathrm{load}(t) = 0$.
 Solve for the current and speed in steady-state: $i(t) = I_{ss}$ and $\omega(t) = \Omega_{ss}$:
 
 $$
