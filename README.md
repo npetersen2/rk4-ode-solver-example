@@ -1,4 +1,4 @@
-# Examples of RK4 ODE Solver in Python
+# Motor Modeling + RK4 ODE Solver + Python
 
 This collection of Python files implement the popular [RK4 numerical integration method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) and a few example differential equation applications of electrical and electromechanical systems.
 
