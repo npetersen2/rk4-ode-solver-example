@@ -18,7 +18,7 @@ $$
 y(t_0) = y_\mathrm{init}
 $$
 
-where $y$ is the vector of system derivative state and $f$ is an function.
+where $y$ is the vector of system derivative state and $f$ is a function.
 
 If we write our system equations in this form, their solution can be approximated using the solver. Notice that the function $f$, i.e., the system derivative, can be nonlinear and, in general, very complicated. The solver should still work, meaning converge to the solution with limited error.
 
