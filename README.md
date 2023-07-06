@@ -51,20 +51,21 @@ For example, in a scalar system (1 input, 1 output):
 
 ## Canonical Form for Numerical Integration Methods
 
-Numerical integration methods (like RK4) can be generally applied to systems of this form:
+Per [Wikipedia](https://en.wikipedia.org/wiki/Ordinary_differential_equation#Reduction_to_a_first-order_system), any explicit differential equation of order $n$ can be written as a system of $n$ first-order differential equations:
 
 $$
-\frac{\mathrm{d} y}{\mathrm{d} t} = f(t,y)
+\frac{\mathrm{d} \boldsymbol{y}}{\mathrm{d} t} = \boldsymbol{f}(t,\boldsymbol{y})
 %
 \quad\quad\quad\quad
 %
-y(t_0) = y_\mathrm{init}
+\boldsymbol{y}(t_0) = \boldsymbol{y}_\mathrm{init}
 $$
 
-where $y$ is the vector of system state and $f$ is a function which describes the derivative of $y$.
-In many systems, the derivative equations themselves are not a function of time $t$. Instead, $t$ is used to obtain the input to the system $u$, meaning that $f(t,y)$ could instead be written as $f(u(t),y)$.
+where $\boldsymbol{y}$ is the vector of system state and $\boldsymbol{f}$ is a function which describes the derivative of $\boldsymbol{y}$.
+In many systems, the derivative equations themselves are not a function of time $t$. Instead, $t$ is used to obtain the input to the system $\boldsymbol{u}$, meaning that $\boldsymbol{f}(t,\boldsymbol{y})$ could instead be written as $\boldsymbol{f}(\boldsymbol{u}(t),\boldsymbol{y})$.
 
-If we write our system equations in this form, their solution can be approximated using the solver. Notice that the function $f$, i.e., the system derivative, can be nonlinear and, in general, very complicated. The solver should still work, meaning converge to the solution with limited error.
+Numerical integration methods (like RK4) can be generally applied to systems of this form.
+If we write our system equations in this form, their solution can be approximated using the solver. Notice that the function $\boldsymbol{f}$, i.e., the system derivative, can be nonlinear and, in general, very complicated. The solver should still work, meaning converge to the solution with limited error.
 
 ## Example 1: RL Circuit
 
@@ -89,13 +90,9 @@ $$
 Or, in general form:
 
 $$
-y = \begin{bmatrix}
-i
-\end{bmatrix},\quad
+y = i,\quad
 %
-u = \begin{bmatrix}
-v
-\end{bmatrix},\quad
+u = v,\quad
 %
 f(t,y) = \frac{1}{L} u(t) - \frac{R}{L} y
 $$
@@ -212,7 +209,7 @@ $$
 Or, in general form:
 
 $$
-y = \begin{bmatrix}
+\boldsymbol{y} = \begin{bmatrix}
 y_1\\
 y_2
 \end{bmatrix} =
@@ -221,7 +218,7 @@ i\\
 \omega
 \end{bmatrix}, \quad
 %
-u = \begin{bmatrix}
+\boldsymbol{u} = \begin{bmatrix}
 u_1\\
 u_2
 \end{bmatrix} =
@@ -230,7 +227,7 @@ v\\
 \tau_\mathrm{load}
 \end{bmatrix}, \quad
 %
-f(t,y) =
+\boldsymbol{f}(t,\boldsymbol{y}) =
 \begin{bmatrix}
 \frac{1}{L} u_1(t) - \frac{R}{L} y_1 - \frac{k_\mathrm{e}}{L} y_2 \\
 -\frac{1}{J} u_2(t) - \frac{b}{J} y_2 + \frac{k_\mathrm{t}}{J} y_1
