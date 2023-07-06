@@ -291,7 +291,7 @@ Note that, depending on the vendor, these parameters might vary. However, these 
 
 Based on the above specs, combined with assumptions on the electrical and mechanical time constants, the full model parameters can be derived.
 
-The armature winding resistance $R$ can be directly computed based on the no-load current:
+The armature winding resistance $R$ can be directly computed based on the stall current:
 
 $$
 R = \frac{V_\mathrm{rated}}{I_\mathrm{stall}}
