@@ -306,7 +306,7 @@ k_e = k_t &= \frac{V_\mathrm{rated}}{\Omega_\mathrm{no-load}} - \frac{V_\mathrm{
 \end{align}
 $$
 
-where $\Omega_\mathrm{no-load}$ is the no-load speed in rad/s based on $N_\mathrm{no-load}$, i.e., $\Omega_\mathrm{no-load} = \frac{2\pi}{60} N_\mathrm{no-load}$.
+where $\Omega_\mathrm{no-load}$ is the no-load speed in $\frac{\mathrm{rad}}{\mathrm{sec}}$ based on $N_\mathrm{no-load}$, i.e., $\Omega_\mathrm{no-load} = \frac{2\pi}{60} N_\mathrm{no-load}$.
 
 Now, all the steady-state parameters are known. The armature winding inductance $L$ and rotor inertia $J$ determine the dynamic performance and cannot be estimated directly from the given specifications.
 
