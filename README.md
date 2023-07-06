@@ -243,21 +243,19 @@ We can solve for the steady-state operating point by setting our differential eq
 
 $$
 \begin{align}
-0 = \frac{\mathrm{d} i(t)}{\mathrm{d} t} &= \frac{1}{L} v(t) - \frac{R}{L} i(t) - \frac{k_\mathrm{e}}{L} \omega(t)
-\\
+0 = \frac{\mathrm{d} i(t)}{\mathrm{d} t} &= \frac{1}{L} v(t) - \frac{R}{L} i(t) - \frac{k_\mathrm{e}}{L} \omega(t) \\
 0 = \frac{\mathrm{d} \omega(t)}{\mathrm{d} t} &= -\frac{1}{J} \tau_\mathrm{load}(t) - \frac{b}{J} \omega(t) + \frac{k_\mathrm{t}}{J} i(t)
 \end{align}
 $$
 
-Assume a constant voltage applied $v(t) = V_{ss}$ and load torque $\tau_\mathrm{load}(t) = \Tau_{\mathrm{load},ss}$.
+Assume a constant voltage applied $v(t) = V_{ss}$ and load torque $\tau_\mathrm{load}(t) = T_{\mathrm{load},ss}$.
 
 Then, solve for the current and speed in steady-state: $i(t) = I_{ss}$ and $\omega(t) = \Omega_{ss}$:
 
 $$
 \begin{align}
-0 &= \frac{1}{L} V_{ss} - \frac{R}{L} I_{ss} - \frac{k_\mathrm{e}}{L} \Omega_{ss}
-\\
-0 &= -\frac{1}{J} \Tau_{\mathrm{load},ss} - \frac{b}{J} \Omega_{ss} + \frac{k_\mathrm{t}}{J} I_{ss}
+0 &= \frac{1}{L} V_{ss} - \frac{R}{L} I_{ss} - \frac{k_\mathrm{e}}{L} \Omega_{ss} \\
+0 &= -\frac{1}{J} T_{\mathrm{load},ss} - \frac{b}{J} \Omega_{ss} + \frac{k_\mathrm{t}}{J} I_{ss}
 \end{align}
 $$
 
@@ -265,14 +263,14 @@ After solving the system of equations:
 
 $$
 \begin{align}
-I_{ss} &= V_{ss} \frac{1}{\left(\frac{k_\mathrm{e} k_\mathrm{t}}{b} + R \right)} + \Tau_{\mathrm{load},ss} \frac{1}{\left( \frac{b R}{k_\mathrm{e}} + k_\mathrm{t} \right)} \\
-\Omega_{ss} &= V_{ss} \frac{1}{\left(\frac{b R}{k_\mathrm{t}} + k_\mathrm{e}\right)} - \Tau_{\mathrm{load},ss} \frac{1}{\left( \frac{k_e k_t}{R} + b \right)}
+I_{ss} &= V_{ss} \frac{1}{\left(\frac{k_\mathrm{e} k_\mathrm{t}}{b} + R \right)} + T_{\mathrm{load},ss} \frac{1}{\left( \frac{b R}{k_\mathrm{e}} + k_\mathrm{t} \right)} \\
+\Omega_{ss} &= V_{ss} \frac{1}{\left(\frac{b R}{k_\mathrm{t}} + k_\mathrm{e}\right)} - T_{\mathrm{load},ss} \frac{1}{\left( \frac{k_e k_t}{R} + b \right)}
 \end{align}
 $$
 
 Now, let's examine these results under an extreme case:
 
-Consider the mechanical damping $b$ goes to 0, i.e., a frictionless system, and the applied load torque $\Tau_{\mathrm{load},ss} = 0$. Then:
+Consider the mechanical damping $b$ goes to 0, i.e., a frictionless system, and the applied load torque $T_{\mathrm{load},ss} = 0$. Then:
 
 - The steady-state speed becomes $\Omega_{ss} = V_{ss} / k_\mathrm{e}$.
 - The steady-state current becomes $I_{ss} = 0$.
